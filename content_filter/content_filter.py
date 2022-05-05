@@ -26,6 +26,9 @@ class ContentFilter:
 	def get_blacklisted_pages(self):
 		return self.blacklisted_pages
 
+	def is_blacklisted(self, page):
+		return page in self.blacklisted_pages
+
 	def save(self):
 		self.dump()
 
